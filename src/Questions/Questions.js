@@ -1,6 +1,8 @@
 // import axios from "axios";
 import React, { useEffect } from "react";
+import "./Questions.css";
 import data from "./data";
+import { Link } from "react-router-dom";
 const Questions = () => {
   useEffect(() => {
     console.log(data);
@@ -17,7 +19,23 @@ const Questions = () => {
     // return () => {};
   }, []);
 
-  return <h1 style={{ textAlign: "center" }}>Waiting for the design</h1>;
+  return (
+    <div
+      style={{
+        height: "90vh",
+        display: "flex",
+        placeContent: "center",
+        placeItems: "center",
+        flexDirection: "column",
+      }}
+    >
+      <h1> Waiting for the design </h1>
+
+      <Link to="/" className="goBack">
+        Go Back
+      </Link>
+    </div>
+  );
 };
 
 export default Questions;

@@ -1,0 +1,9 @@
+.goBack {
+  border: none;
+  padding: 10px 20px;
+  background: #0f0f75;
+  color: #fff;
+  border-radius: 5px;
+  cursor: pointer;
+  text-decoration: none;
+}
