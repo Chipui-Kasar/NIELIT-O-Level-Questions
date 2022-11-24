@@ -1,0 +1,27 @@
+.Home {
+  height: 100vh;
+  /* background-image: url("https://upload.wikimedia.org/wikipedia/en/b/b4/NIELIT_Logo.jpg"); */
+  background-image: linear-gradient(
+      180deg,
+      rgb(0 0 0 / 26%),
+      rgba(0, 0, 0, 0.6)
+    ),
+    url(https://www.nielit.gov.in/images/143583910.jpeg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  color: #fff;
+}
+.Home .browse {
+  border: none;
+  padding: 20px;
+  background: #0f0f75;
+  color: #fff;
+  border-radius: 5px;
+  cursor: pointer;
+  text-decoration: none;
+}
