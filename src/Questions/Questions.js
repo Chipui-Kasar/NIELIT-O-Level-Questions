@@ -23,6 +23,10 @@ const Questions = () => {
   return (
     <div className="questions">
       {/* <h1> Waiting for the design </h1> */}
+      <div class="scroll-left">
+        <p>Hover to see the preview and click to download</p>
+      </div>
+      <br />
       {/* <marquee> Hover to preview the file & click to download</marquee> */}
       <Link to="/" className="goBack">
         Go Back
@@ -70,6 +74,7 @@ const Questions = () => {
             );
           })}
       </div>
+
     </div>
   );
 };

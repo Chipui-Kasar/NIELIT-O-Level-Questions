@@ -1,5 +1,5 @@
 .questions {
-  height: 100vh;
+  min-height: 100vh;
   display: flex;
   place-content: center;
   place-items: center;
@@ -11,6 +11,7 @@
     ),
     url(https://www.nielit.gov.in/images/143583910.jpeg);
   color: white;
+  justify-content: flex-start;
 }
 .goBack {
   border: none;
@@ -50,4 +51,22 @@
   z-index: 999;
   height: 300px;
   width: 300px;
+}
+
+@media only screen and (max-width: 600px) {
+  .questions .container {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .scroll-left {
+    display: none;
+  }
+}
+@media only screen and (max-width: 400px) {
+  .questions .container {
+    grid-template-columns: repeat(1, 1fr);
+    margin: 0 10px;
+  }
+  .scroll-left {
+    display: none;
+  }
 }

@@ -1,5 +1,5 @@
 .Home {
-  height: 100vh;
+  min-height: 100vh;
   /* background-image: url("https://upload.wikimedia.org/wikipedia/en/b/b4/NIELIT_Logo.jpg"); */
   background-image: linear-gradient(
       180deg,
@@ -24,4 +24,9 @@
   border-radius: 5px;
   cursor: pointer;
   text-decoration: none;
+}
+.footer {
+  position: absolute;
+  bottom: 0;
+  margin-bottom: 10px;
 }

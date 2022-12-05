@@ -9,6 +9,7 @@ function App() {
         <Route path="/questions" element={<Questions />} />
         <Route path="*" element={<Home />} />
       </Routes>
+
     </BrowserRouter>
   );
 }

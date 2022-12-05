@@ -8,6 +8,7 @@ function Home() {
       <Link to="/questions" className="browse">
         Browse Previous Year Questions
       </Link>
+      <div className="footer">Designed & Developed by Themyo Khudai</div>
     </div>
   );
 }
