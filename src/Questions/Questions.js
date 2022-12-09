@@ -3,6 +3,7 @@ import React, { useEffect, useState } from "react";
 import "./Questions.css";
 import data from "./data";
 import { Link } from "react-router-dom";
+import bg from '../images/background.jpg'
 const Questions = () => {
   const [datas, setData] = useState([]);
   useEffect(() => {
@@ -19,14 +20,12 @@ const Questions = () => {
     //   });
     // return () => {};
   }, []);
-
+  console.log(bg);
   return (
-    <div className="questions">
+    <div className="questions" style={{ backgroundImage: `url(${bg})` }}>
       {/* <h1> Waiting for the design </h1> */}
-      <div class="scroll-left">
-        <p>Hover to see the preview and click to download</p>
-      </div>
-      <br />
+
+
       {/* <marquee> Hover to preview the file & click to download</marquee> */}
       <Link to="/" className="goBack">
         Go Back
@@ -39,11 +38,21 @@ const Questions = () => {
                 <b>{res.subject}</b>
                 <ol>
                   {res.details.map((sub, key) => {
-                    let splitUrl = "https://drive.google.com/file/d/";
-                    let id = sub.url.split(splitUrl)[1].split("/")[0];
+                    // let splitUrl = "https://drive.google.com/file/d/";
+                    // let id = sub.url.split(splitUrl)[1].split("/")[0];
                     return (
-                      <li key={key} className="items">
-                        <a
+                      <>
+                        <li key={key} className="items">
+                          <a
+                            href={
+                              sub.url
+                            }
+                            target="_blank"
+                            rel="noreferrer"
+                          >
+                            {sub.title}
+                          </a>
+                          {/* <a
                           href={
                             "https://drive.google.com/u/0/uc?id=" +
                             id +
@@ -53,20 +62,12 @@ const Questions = () => {
                           rel="noreferrer"
                         >
                           {sub.title}
-                        </a>
+                        </a> */}
 
-                        <div className="pdfContent">
-                          <iframe
-                            className="fileViewer"
-                            src={sub.url.split("/view")[0] + "/preview"}
-                            embedded="true"
-                            width="300px"
-                            height="300px"
-                            frameBorder="0"
-                            title={sub.title}
-                          ></iframe>
-                        </div>
-                      </li>
+
+                        </li>
+
+                      </>
                     );
                   })}
                 </ol>
